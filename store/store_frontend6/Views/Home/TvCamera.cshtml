@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "TVs, cameras and phones";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Select the category: </p>
+<div class="grid-container">
+	<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+		<div class="grid-item">
+			<p class="p-bold">Televisions</p>
+			<img src="~/images/tv_section.jfif" alt="TV">
+		</div>
+	</a>
+	<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+		<div class="grid-item" id="camera">
+			<p class="p-bold">Cameras</p>
+			<img src="~/images/camera_section.jfif" alt="Camera">
+		</div>
+	</a>
+	<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+		<div class="grid-item" id="phone">		
+			<p class="p-bold">Phones</p>
+			<img src="~/images/phone_section.jfif" alt="Phone">
+		</div>
+	</a>
+</div>

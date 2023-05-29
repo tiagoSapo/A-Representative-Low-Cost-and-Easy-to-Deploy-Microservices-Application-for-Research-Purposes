@@ -1,0 +1,82 @@
+﻿@model List<Order>
+@using System.Globalization;
+
+@{
+    ViewData["Title"] = "My orders";
+}
+
+
+<style>
+    table th {
+        white-space: nowrap;
+    }
+
+    .td-long {
+        width: 10em; /* the element needs a fixed width (in px, em, %, etc) */
+        overflow: hidden; /* make sure it hides the content that overflows */
+        white-space: nowrap; /* don't break the line */
+        text-overflow: ellipsis; /* give the beautiful '...' effect */
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 col-md-12">
+            <h2 class="text-center mb-4">@ViewData["Title"]</h2>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th></th>
+                        <th>Status</th>
+                        <th></th>
+                        <th>Cost (€)</th>
+                        <th></th>
+                        <th>Address</th>
+                        <th></th>
+                        <th>Creation date</th>
+                        <th></th>
+                        <th>Update date</th>
+                        <th></th>
+                        <th>Check order</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var order in Model)
+                    {
+                        <tr>
+                            <td>@order.id</td>
+                            <td></td>
+                            <td style="white-space: nowrap;">
+                                @if (order.status.Equals("payment_received"))
+                                {
+                                    <span style="color: darkblue">@order.status.Replace("_", " ")</span>
+                                }
+                                else
+                                {
+                                    <span style="color: #777777">@order.status.Replace("_", " ")</span>
+                                }
+                            </td>
+                            <td></td>
+                            <td>@string.Format(new CultureInfo("pt-PT"), "{0:C}", order.total_cost)</td>
+                            <td></td>
+                            <td class="td-long">@order.address</td>
+                            <td></td>
+                            <td class="td-long">@order.created_at.ToString("MMMM d, yyyy h:mm tt")</td>
+                            <td></td>
+                            <td class="td-long">@order.updated_at.ToString("MMMM d, yyyy h:mm tt")</td>
+                            <td></td>
+                            <td>
+                                <button class="view-btn" onclick="location.href = '@Url.ActionLink("OrderDetails", "Account", new { orderId = order.id })'">
+                                    Check
+                                </button>
+                            </td>
+                            <td></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

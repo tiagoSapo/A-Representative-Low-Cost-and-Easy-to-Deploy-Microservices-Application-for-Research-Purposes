@@ -1,0 +1,140 @@
+﻿@model StoreFrontendFinal.Models.ProductAndOpinionsVM
+@using StoreFrontendFinal.Models.Utils
+@{
+    ViewData["Title"] = "Details";
+
+    int quantity = 1;
+    string imageUrl = Model.Product.image;
+
+}
+
+<style>
+    #opinion-button {
+        background-color: darkslateblue;
+        border-color: darkslateblue;
+        margin-bottom: 10px;
+    }
+    #opinion-button:hover {
+        background-color: #412c66;
+        border-color: #412c66;
+    }
+</style>
+
+<main>
+    <div class="product-detail">
+        <div class="product-image">
+            <img src="@imageUrl" alt="Product Image" width="400">
+        </div>
+        <div class="product-info">
+            <h3>@Html.DisplayFor(model => model.Product.name)</h3>
+            <p class="product-price">@Html.DisplayFor(model => model.Product.price)€</p>
+            <form action="@Url.Action("AddToCart", "Purchase", new { productId = Model.Product.id, quantity = quantity })" method="post">
+                <label for="product-quantity">Quantity:</label>
+                <input id="product-quantity" type="number" name="quantity" value="4" min="1" max="10">
+                <button type="submit" class="btn btn-primary">
+                    Buy
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="product-description" style="margin-bottom: 30px">
+        <h3>Description</h3>
+        <p>@Html.DisplayFor(model => model.Product.description)</p>
+        <ul>
+
+            @if (Model.Product.color != null && Model.Product.color.Length > 0)
+                {
+                <li><b>Color:</b> @Html.DisplayFor(model => model.Product.color)</li>
+                }
+            @if (Model.Product.size != null && Model.Product.size.Length > 0)
+                {
+                <li><b>Size:</b> @Html.DisplayFor(model => model.Product.size)</li>
+                }
+
+            <li>
+                <b>Brand:</b>
+                @{
+                    @Html.DisplayFor(model => model.Product.brand.name);
+                }
+            </li>
+            <li>
+                <b>About brand:</b>
+                @{
+                    @Html.DisplayFor(model => model.Product.brand.description)
+                }
+            </li>
+        </ul>
+    </div>
+    <div class="product-description">
+        <h3>Opinions</h3>
+        <div>
+            <button id="opinion-button" type="submit" onclick="location.href='@Url.Action("PostOpinion", "Gaming", new { productId = Model.Product.id })'" class="btn btn-danger">
+                <i class="fa fa-plus"></i>
+                Post an opinion
+            </button>
+        </div>
+        @{if (Model.Opinions.Count() <= 0) {
+                <p style="font-style: italic; color:#666666">There are no opinions for this product yet. Want to be the first posting an opinion?</p>
+            }
+        else {
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>
+                        <div style="white-space: nowrap;">
+                            Number of stars
+                        </div>
+                    </th>
+                    <th></th>
+                    <th>
+                        Title
+                    </th>
+                    <th></th>
+                    <th>
+                        Description
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Opinions)
+                 {
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div style="white-space: nowrap;">
+                                @{
+                                    for (int i = 0; i < item.number_of_stars; i++)
+                                    {
+                                        <img src="~/images/star.png" alt="star" style="width:20px; height:20px" />
+                                    }
+                                }
+                            </div>
+                        </td>
+                        <td></td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.title)
+                        </td>
+                        <td></td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.description)
+                        </td>
+                        <td></td>
+                    </tr>
+                 }
+            </tbody>
+        </table>
+        }
+    }
+    </div>
+</main>
+
+<script>document.getElementById("product-quantity")
+                .addEventListener("change", function () {
+                    @quantity = document.getElementById("quantity").value;
+                    print("hello! @quantity");
+                });
+</script>
+
+

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<StoreFrontendFinal.Models.Product>
+@using System.Globalization;
+
+@{
+    decimal? total = 0.0m;
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price (€)</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.name</td>
+                <td>@string.Format(new CultureInfo("pt-PT"), "{0:C}", item.price)</td>
+                <td>@item.quantity</td>
+                <td>@(item.quantity * Convert.ToDecimal(item.price))€</td>
+                @{total += item.quantity * Convert.ToDecimal(item.price);}
+            </tr>
+        }
+        <tr class="total">
+            <td colspan="3">Total</td>
+            <td>@total€</td>
+        </tr>
+    </tbody>
+</table>
+

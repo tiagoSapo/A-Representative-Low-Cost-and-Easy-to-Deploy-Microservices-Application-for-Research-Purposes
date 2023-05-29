@@ -1,0 +1,159 @@
+﻿@model OrderViewModel
+@using System.Globalization;
+
+@{
+    ViewData["Title"] = "My Order";
+}
+<style>
+
+    table {
+        background-color: #fff;
+        border-collapse: collapse;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        color: #333;
+        font-weight: normal;
+    }
+
+    .total {
+        font-weight: bold;
+        text-align: right;
+        margin-bottom: 10%;
+    }
+
+    h2 {
+        color: #222;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .product-table {
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+        .product-table th {
+            background-color: #f5f5f5;
+            color: #333;
+            font-size: 18px;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .product-table td {
+            padding: 10px;
+        }
+
+    .product-image {
+        height: 100px;
+        margin-bottom: 10px;
+        width: 100px;
+    }
+
+    .product-name {
+        color: #222;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .product-price {
+        color: #888;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .product-quantity {
+        color: #333;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .product-subtotal {
+        color: #222;
+        font-size: 18px;
+        font-weight: bold;
+        text-shadow: 1px 1px #ddd;
+    }
+</style>
+
+
+
+@if (Model.Order != null && Model.Products != null)
+{
+    <h2>Order @Model.Order.id</h2>
+    <table>
+        <tr>
+            <th>Order Number</th>
+            <td>@Model.Order.id</td>
+        </tr>
+        <tr>
+            <th>Order Status</th>
+            @if (Model.Order.status.Equals("payment_received"))
+            {
+                <td style="color: darkblue">@Model.Order.status.Replace("_", " ")</td>
+            }
+            else
+            {
+                <td style="color: #777777">@Model.Order.status.Replace("_", " ")</td>
+            }
+        </tr>
+        <tr>
+            <th>Order Address</th>
+            <td>@Model.Order.address</td>
+        </tr>
+        <tr>
+            <th>Order creation</th>
+            <td>@Model.Order.created_at.ToString("MMMM d, yyyy h:mm tt")</td>
+        </tr>
+        <tr>
+            <th>Order last update</th>
+            <td>@Model.Order.updated_at.ToString("MMMM d, yyyy h:mm tt")</td>
+        </tr>
+        <tr>
+            <th>Order Total Cost</th>
+            <td>@string.Format(new CultureInfo("pt-PT"), "{0:C}", Model.Order.total_cost)</td>
+        </tr>
+    </table>
+
+    <h2>Products Purchased</h2>
+
+    <table class="product-table">
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <td>
+                    <div style=" display: inline-block;">
+                        <img src="@item.image" alt="Product Image" class="product-image">
+                        @item.name
+                    </div>
+                </td>
+                <td class="product-price">@string.Format(new CultureInfo("pt-PT"), "{0:C}", item.price)</td>
+                <td class="product-quantity">@item.quantity</td>
+                <td class="product-subtotal">@(item.quantity * Convert.ToDecimal(item.price))€</td>
+            </tr>
+        }
+
+    </table>
+
+    <div class="total">
+        Order Total: @string.Format(new CultureInfo("pt-PT"), "{0:C}", Model.Order.total_cost)
+    </div>
+}

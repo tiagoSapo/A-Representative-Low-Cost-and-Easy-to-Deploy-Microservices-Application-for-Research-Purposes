@@ -1,0 +1,28 @@
+﻿@model string
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">
+        Welcome to
+        <span class="store_name">Penguin Store</span>
+    </h1>
+    <img src="~/images/store_logo.jpg" alt="Store logo" width="500" height="400">
+    <p class="summary">The place where you can find the best prices.</p>
+    <h4>@Model</h4>
+</div>
+
+
+@if (ViewData["Message"] != null)
+{
+    <script type="text/javascript">
+        @{
+            var message = ViewData["Message"];
+        }
+        window.onload = function () {
+            alert("@message");
+        };
+
+    </script>
+}

@@ -1,0 +1,55 @@
+﻿@model BankFrontend.Models.Account
+
+@{
+    ViewData["Title"] = "Criar conta";
+}
+
+<h1>Criar conta</h1>
+
+<h4>Conta</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div class="form-group">
+                <label asp-for="holderName" class="control-label"></label>
+                <input asp-for="holderName" class="form-control" />
+                <span asp-validation-for="holderName" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="holderEmail" class="control-label"></label>
+                <input asp-for="holderEmail" class="form-control" />
+                <span asp-validation-for="holderEmail" class="text-danger"></span>
+            </div>
+            <br />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="balance" class="control-label"></label>
+                <input asp-for="balance" class="form-control" />
+                <span asp-validation-for="balance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <br />
+                <input type="submit" value="Criar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Regressar à página principal</a>
+</div>
+
+@if (ViewBag.Message != null)
+{
+            <script type="text/javascript">
+                window.onload = function () {
+                    alert("@ViewBag.Message");
+                };
+            </script>
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

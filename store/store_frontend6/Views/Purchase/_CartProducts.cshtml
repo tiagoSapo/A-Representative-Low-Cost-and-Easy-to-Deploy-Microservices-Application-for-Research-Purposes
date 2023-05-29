@@ -1,0 +1,154 @@
+﻿@model IEnumerable<StoreFrontendFinal.Models.Product>
+@using System.Globalization;
+
+<style>
+
+    /* Main styles */
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px;
+        padding: unset;
+    }
+
+    /* Cart styles */
+    .cart {
+        flex-basis: 40%;
+        margin-right: 10%;
+    }
+
+        .cart h2 {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .cart table {
+            border-collapse: collapse;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .cart th,
+        .cart td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .cart .total {
+            font-weight: bold;
+        }
+
+    /* Products styles */
+    .products {
+        flex-basis: 50%;
+    }
+
+        .products h2 {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .products ul {
+            list-style: none;
+            margin-top: 10px;
+            padding: 0;
+        }
+
+        .products li {
+            border: 1px solid #ccc;
+            display: flex;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+            .products li img {
+                max-width: 100px;
+            }
+
+    .product-info {
+        flex-basis: 60%;
+    }
+
+    .product-image {
+        margin: auto;
+    }
+
+    .product-info h3 {
+        margin-top: 0;
+    }
+
+    .product-info p {
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    .product-info label {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .product-info input[type="number"] {
+        width: 50px;
+    }
+
+    .product-info button {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    #purchase-button {
+        padding-right: 10%;
+        padding-left: 10%;
+        margin-top: 5%;
+        margin-bottom: unset;
+        background-color: darkslateblue;
+        border-color: darkslateblue;
+    }
+
+    #div-delivery td {
+        text-align: left;
+    }
+
+    #purchase-button:hover {
+        background-color: #412c66;
+        border-color: #412c66;
+    }
+</style>
+
+@if (Model.Count() == 0)
+{
+    <span>Cart is empty</span>
+}
+else
+{
+
+
+<ul>
+    @foreach (var item in Model)
+        {
+        <li>
+            <img class="product-image" src="@item.image" alt="Product @item.id">
+            <div class="product-info">
+                <h5 style="white-space: nowrap;">@item.name</h5>
+                <p>@string.Format(new CultureInfo("pt-PT"), "{0:C}", item.price)</p>
+                <label for="quantity1">Quantity:</label>
+                @{
+                    if (item.quantity != null)
+                    {
+                        @item.quantity
+                    }
+                    else
+                    {
+                        <p>?</p>
+                    }
+                }
+                <button class="btn btn-danger remove-from-cart" data-product-id="@item.id">Remove from cart</button>
+            </div>
+        </li>
+                    }
+</ul>
+                    }
+

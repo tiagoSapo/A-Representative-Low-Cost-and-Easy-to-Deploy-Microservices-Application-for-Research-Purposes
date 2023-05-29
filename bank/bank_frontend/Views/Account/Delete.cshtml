@@ -1,0 +1,53 @@
+﻿@model BankFrontend.Models.Account
+
+@{
+    ViewData["Title"] = "Apagar";
+}
+
+<h1>Apagar</h1>
+
+<h3>Tem a certeza que quer apagar esta conta?</h3>
+<div>
+    <h4>Conta</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.holderName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.holderName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.holderEmail)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.holderEmail)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.balance)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.balance)
+        </dd>
+    </dl>
+
+    @if (ViewBag.Message != null)
+    {
+        <script type="text/javascript">
+                window.onload = function () {
+                    alert("@ViewBag.Message");
+                };
+        </script>
+    }
+
+    <form asp-action="Delete">
+        <input type="submit" value="Apagar" class="btn btn-danger" /> |
+        <a asp-action="Index">Regressar à página principal</a>
+    </form>
+</div>

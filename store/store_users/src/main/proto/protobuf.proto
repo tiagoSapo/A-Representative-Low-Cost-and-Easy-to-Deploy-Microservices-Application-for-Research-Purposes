@@ -1,0 +1,108 @@
+syntax = "proto3";
+
+package proto;
+
+/* Java only */
+option java_package = "com.proto";
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+
+/*
+*   Requests
+*/
+message Id {
+    int32 id = 1;
+}
+
+message Email {
+    string email = 1;
+}
+
+message Empty {
+
+}
+
+message Ok {
+    bool ok = 1;
+}
+
+message Auth {
+    string email = 1;
+    string password = 2;
+}
+
+/*
+*   Responses
+*/
+message Faq {
+    int32 id = 1;
+    string question = 2;
+    string anwser = 3;
+
+    google.protobuf.Timestamp created_at = 4;
+    google.protobuf.Timestamp updated_at = 5;
+}
+
+message Country {
+    int32 id = 1;
+    string name = 2;
+}
+
+message User {
+    int32 id = 1;
+    string name = 2;
+    string email = 3;
+    string password = 4;
+    string phone = 5;
+    
+    string address = 6;
+    int32 country = 7;
+
+    google.protobuf.Timestamp created_at = 8;
+    google.protobuf.Timestamp updated_at = 9;
+
+    int32 cardNumber = 10;
+}
+
+message ListUser {
+    repeated User user = 1;
+}
+
+message ListCountry {
+    repeated Country country = 1;
+}
+
+message ListFaq {
+    repeated Faq faq = 1;
+}
+
+service UserService {
+
+    /* Authentication */
+    rpc authenticate(Auth) returns (Ok) {}
+    rpc register(User) returns (Ok) {}
+
+    /* User */
+    rpc getUsers(Empty) returns (ListUser) {}
+    rpc getUserById(Id) returns (User) {}
+    rpc getUserByEmail(Email) returns (User) {}
+
+    rpc addUser(User) returns (Ok) {}
+    rpc updateUser(User) returns (Ok) {}
+    rpc removeUser(Id) returns (Ok) {}
+
+    /* Country */
+    rpc getCountries(Empty) returns (ListCountry) {}
+    rpc getCountry(Id) returns (Country) {}
+
+    rpc addCountry(Country) returns (Ok) {}
+    rpc removeCountry(Id) returns (Ok) {}
+
+    /* FAQ */
+    rpc getFaqs(Empty) returns (ListFaq) {}
+    rpc getFaq(Id) returns (Faq) {}
+
+    rpc addFaq(Faq) returns (Ok) {}
+    rpc removeFaq(Id) returns (Ok) {}
+}

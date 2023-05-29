@@ -1,0 +1,48 @@
+﻿<Properties StartupConfiguration="{F395539C-4526-4E3E-B0B9-E9E0D675898D}|https">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/tiago/Movies/project_aws/store/store_frontend6/Models/Microservices/UserServices.cs" relfile="Models/Microservices/UserServices.cs" line="89" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.StoreFrontendFinal PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Microservices/UserServices.cs">
+    <Files>
+      <File FileName="Models/Microservices/UserServices.cs" Line="16" Column="1" />
+      <File FileName="Controllers/HomeController.cs" Line="29" Column="29" />
+      <File FileName="Views/Home/Index.cshtml" />
+      <File FileName="Controllers/GamingController.cs" />
+      <File FileName="Controllers/PurchaseController.cs" />
+      <File FileName="Models/Microservices/ProductService.cs" Line="22" Column="14" />
+      <File FileName="Controllers/AccountController.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="StoreFrontendFinal" expanded="True">
+            <Node name="StoreFrontendFinal" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Microservices" expanded="True">
+                  <Node name="UserServices.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Account" expanded="True" />
+                <Node name="Gaming" expanded="True" />
+                <Node name="Home" expanded="True" />
+                <Node name="Purchase" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

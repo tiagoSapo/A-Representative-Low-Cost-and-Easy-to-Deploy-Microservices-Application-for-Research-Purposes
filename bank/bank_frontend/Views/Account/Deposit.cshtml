@@ -1,0 +1,50 @@
+﻿@model BankFrontend.Models.DepositViewModel
+
+@{
+    ViewData["Title"] = "Depositar";
+}
+
+<h1>Depositar</h1>
+
+<h4>Conta</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Deposit">
+
+            <div class="form-group">
+                <label for="itemSelect">Titular da conta</label>
+                @Html.DropDownListFor(model => model.Id, Model.Accounts)
+            </div>
+
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <br />
+                <input type="submit" value="Depositar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Regressar à página principal</a>
+</div>
+
+@if (ViewBag.Message != null)
+{
+            <script type="text/javascript">
+                window.onload = function () {
+                    alert("@ViewBag.Message");
+                };
+            </script>
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

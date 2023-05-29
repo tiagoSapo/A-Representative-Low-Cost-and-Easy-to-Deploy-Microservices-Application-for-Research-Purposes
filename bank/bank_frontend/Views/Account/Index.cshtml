@@ -1,0 +1,70 @@
+﻿@model IEnumerable<BankFrontend.Models.Account>
+
+@{
+    ViewData["Title"] = "Contas";
+}
+
+<h1>Contas</h1>
+<div style="display:flex">
+    <a asp-action="Create">
+        <input type="button" class="btn btn-info " style="margin-right:10px;" runat="server" value="Criar conta" />
+    </a>
+    <a asp-action="Deposit">
+        <input type="button" class="btn btn-warning " runat="server" value="Depositar via MQTT (Async)" />
+    </a>
+</div>
+<br/>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.holderName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.holderEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.balance)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.holderName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.holderEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.balance)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Apagar", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (TempData["Message"] != null)
+{
+    <script type="text/javascript">
+                window.onload = function () {
+                    alert("@TempData["Message"]");
+                };
+    </script>
+}
+

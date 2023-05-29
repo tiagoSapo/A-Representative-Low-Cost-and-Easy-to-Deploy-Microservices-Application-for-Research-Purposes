@@ -1,0 +1,44 @@
+/* Main divs */
+.div-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(
+    100vh - 115px
+  ); /* Subtract the height of the header and footer */
+}
+
+.div-home-not-centered {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(
+    100vh - 115px
+  ); /* Subtract the height of the header and footer */
+}
+
+.div-margin-bottom {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.div-opinion {
+  height: calc(
+    100vh - 150px
+  ); /* Subtract the height of the header and footer */
+}
+
+/* Other */
+.blue-color {
+  color: rgb(49, 95, 159);
+}
+
+.table-container {
+  margin: 20px 50px; /* Add margin to the left and right */
+}
+
+.horizontal {
+  display: flex;
+  /*justify-content: space-between;*/ /* Or any other value to adjust spacing */
+  align-items: center; /* Or any other value to adjust alignment */
+}

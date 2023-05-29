@@ -1,0 +1,70 @@
+﻿@model StoreFrontendFinal.Models.AuthViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+
+<img src="~/images/key.png" width="200" height="200" class="img-responsive" />
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group" style="margin-bottom:10px">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.PasswordFor(model => model.Password, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <br />
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Login" class="btn btn-primary" />
+                <button type="button" class="btn btn-secondary" onclick="location.href='@Url.Action("Index", "Home")'">Cancel</button>
+            </div>
+        </div>
+        <br />
+        
+    </div>
+}
+
+<div class="form-group">
+    <p style="color:#212A21; margin-bottom:4px">You don't have an account? Click on 'Register' to register yourself in our store 😀</p>
+    <button class="btn btn-success" onclick="location.href='@Url.Action("Register", "Login")'">
+        Register
+        <i class="fa fa-plus"></i>
+    </button>
+</div>
+
+@if (ViewData["Message"] != null)
+{
+    <script type="text/javascript">
+        @{
+            var message = ViewData["Message"];
+        }
+        window.onload = function () {
+            alert("@message");
+        };
+
+    </script>
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

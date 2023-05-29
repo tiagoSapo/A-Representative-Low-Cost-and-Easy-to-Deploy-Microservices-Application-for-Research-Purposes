@@ -1,0 +1,120 @@
+﻿@model Proto.User
+@{
+    ViewData["Title"] = "My Account";
+}
+<style>
+
+    /* Styling for the menu container */
+    .menu-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    /* Styling for the menu item */
+    .menu-item {
+        width: 380px;
+        height: 280px;
+        margin: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s ease-in-out;
+        overflow: hidden;
+        position: relative;
+    }
+
+        /* Styling for the menu item image */
+        .menu-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: scale-down;
+            transition: all 0.2s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        /* Hover effect for the menu item */
+        .menu-item:hover {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+            /* Hover effect for the menu item image */
+            .menu-item:hover img {
+                transform: scale(1.1);
+            }
+
+        /* Styling for the menu item title */
+        .menu-item h3 {
+            color: #fff;
+            font-size: 16px;
+            margin: 0;
+            padding: 16px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            transition: all 0.2s ease-in-out;
+        }
+
+        /* Styling for the menu item link */
+        .menu-item a {
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: all 0.2s ease-in-out;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        /* Hover effect for the menu item link */
+        .menu-item:hover a {
+            background-color: #333;
+            color: #fff;
+            transform: translateX(-10px);
+        }
+</style>
+
+<div class="menu-container">
+
+    <a href="@Url.Action("Details", "Account")">
+        <div class="menu-item">
+            <img src="~/images/profile/profile.png" alt="Check Customer Information">
+            <h3>My account</h3>
+        </div>
+    </a>
+
+    <a href="@Url.Action("Edit", "Account")">
+        <div class="menu-item">
+            <img src="~/images/profile/profile_edit.png" alt="Edit Customer Information">
+            <h3>Edit my account</h3>
+        </div>
+    </a>
+
+    <a href="@Url.Action("Orders", "Account")">
+        <div class="menu-item">
+
+            <img src="~/images/profile/profile_orders.jpg" alt="Check All Customer Orders">
+            <h3>My orders</h3>
+
+        </div>
+    </a>
+
+    <a href="@Url.Action("Delete", "Account")">
+        <div class="menu-item">
+            <img src="~/images/profile/profile_delete.png" alt="Delete Customer Account">
+            <h3>Delete my account</h3>
+        </div>
+    </a>
+
+</div>

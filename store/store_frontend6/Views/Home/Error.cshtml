@@ -1,0 +1,58 @@
+﻿@model string?
+@{
+    ViewData["Title"] = "Error";
+}
+
+<style>
+
+    h1 {
+        font-size: 36px;
+        margin-top: 100px;
+        color: #333333;
+    }
+
+    p {
+        font-size: 24px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        color: #666666;
+    }
+
+    .error-div {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 50px auto;
+    }
+
+        .error-div img {
+            width: 200px;
+            height: 230px;
+            margin-right: 20px;
+        }
+
+    .error-info-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+</style>
+<div class="error-div">
+    <img src="~/images/error.jpg" alt="error-penguin">
+    <div class="error-info-div">
+        <h1>Oops! Something went wrong on the server.</h1>
+        <p>Please try again later.</p>
+        @if (Model != null)
+         {
+                <span style="color:darkred">@Model</span>
+         }
+        <a style="margin-bottom: 5%; margin-top: 5%;" asp-area="" asp-controller="Home" asp-action="Index">
+            Back to homepage
+        </a>
+    </div>
+    
+</div>

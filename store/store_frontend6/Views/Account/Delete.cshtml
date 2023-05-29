@@ -1,0 +1,38 @@
+﻿@model Proto.User
+
+@{
+    ViewBag.Title = "Delete Account";
+}
+<form method="post">
+    <div class="profile">
+        <div class="profile-header">
+            <h1>Delete Account</h1>
+        </div>
+        <div class="profile-body">
+            <div class="profile-info">
+                <p><strong>Name:</strong> <span>@Model.Name</span></p>
+                <p><strong>E-mail address:</strong> <span>@Model.Email</span></p>
+                <p><strong>Address:</strong> <span>@Model.Address</span></p>
+                <p><strong>Card number:</strong> <span>@Model.CardNumber</span></p>
+                <p><strong>Phone:</strong> <span>@Model.Phone</span></p>
+                <p><strong>Country:</strong> <span>@Model.Country</span></p>
+            </div>
+            <div class="profile-image">
+                <img src="~/images/store_logo.jpg" alt="@Model.Name's Profile Picture">
+            </div>
+        </div>
+        <div class="profile-footer">
+
+            <p>Are you sure you want to delete your account?</p>
+            <div class="form-group">
+                <button type="submit" class="btn btn-danger">Delete Account</button>
+                <a asp-controller="Account" asp-action="Index" class="btn btn-secondary">Cancel</a>
+            </div>
+            @Html.HiddenFor(model => model.Id)
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

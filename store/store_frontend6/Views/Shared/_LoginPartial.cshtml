@@ -1,0 +1,38 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+<ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-controller="Purchase" asp-action="Cart">
+            Cart
+            <i class="fa fa-shopping-cart"></i>
+        </a>
+    </li>
+    @{
+        string? username = null;
+
+        if (HttpContextAccessor.HttpContext != null)
+        {
+            username = HttpContextAccessor.HttpContext.Session.GetString("name");
+        }
+    }
+    @if (username != null)
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" title="Manage" href="@Url.Action("Index", "Account")">
+                Hello @username!
+            </a>
+        </li>
+        <li class="nav-item">
+            <form class="form-inline" asp-controller="Login" asp-action="Logout">
+                <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+            </form>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="Login" asp-action="Login">Login</a>
+        </li>
+    }
+</ul>

@@ -1,0 +1,171 @@
+﻿@model StoreFrontendFinal.Models.CartViewModel
+
+
+@{
+    ViewData["Title"] = "My Cart";
+}
+
+<style>
+
+    /* Main styles */
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px;
+        padding: unset;
+    }
+
+    /* Cart styles */
+    .cart {
+        flex-basis: 40%;
+        margin-right: 10%;
+    }
+
+        .cart h2 {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .cart table {
+            border-collapse: collapse;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .cart th,
+        .cart td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .cart .total {
+            font-weight: bold;
+        }
+
+    /* Products styles */
+    .products {
+        flex-basis: 50%;
+    }
+
+        .products h2 {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .products ul {
+            list-style: none;
+            margin-top: 10px;
+            padding: 0;
+        }
+
+        .products li {
+            border: 1px solid #ccc;
+            display: flex;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+            .products li img {
+                max-width: 100px;
+            }
+
+    .product-info {
+        flex-basis: 60%;
+    }
+
+    .product-image {
+        margin: auto;
+    }
+
+    .product-info h3 {
+        margin-top: 0;
+    }
+
+    .product-info p {
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    .product-info label {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .product-info input[type="number"] {
+        width: 50px;
+    }
+
+    .product-info button {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    #purchase-button {
+        padding-right: 10%;
+        padding-left: 10%;
+        margin-top: 5%;
+        margin-bottom: unset;
+        background-color: darkslateblue;
+        border-color: darkslateblue;
+    }
+
+    #div-delivery td {
+        text-align: left;
+    }
+
+    #purchase-button:hover {
+        background-color: #412c66;
+        border-color: #412c66;
+    }
+</style>
+
+<!--<h2>@ViewData["Title"]</h2>-->
+
+<main>
+    <section class="cart">
+        <h2 style="color:darkslateblue">Purchase sucessful!</h2>
+        <div id="cart-table-view">
+            @{await Html.RenderPartialAsync("_CartTable", Model.Products);}
+        </div>
+        <h2 style="margin-top: 10%;">Delivery address</h2>
+        <table id="div-delivery">
+            <tbody>
+                <tr>
+                    <th>Name</th>
+                    <td>@Model.User.Name</td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td>@Model.User.Address</td>
+                </tr>
+                <tr>
+                    <th>Card number (IBAN)</th>
+                    <td>@Model.User.CardNumber</td>
+                </tr>
+                <tr>
+                    <th>E-mail address</th>
+                    <td>@Model.User.Email</td>
+                </tr>
+                <tr>
+                    <th>Date of purchase</th>
+                    <td>@ViewBag.PurchaseDate</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="products">
+        <h2>Products</h2>
+        <div id="cart-products-view">
+            @{await Html.RenderPartialAsync("_CartProductsCheckout", Model.Products);}
+        </div>
+    </section>
+</main>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

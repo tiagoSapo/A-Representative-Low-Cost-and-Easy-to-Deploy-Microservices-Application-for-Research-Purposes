@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Gaming";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Select your gaming platform: </p>
+<div class="grid-container">
+	<a class="navbar-brand" asp-area="" asp-controller="Gaming" asp-action="Playstation">
+		<div class="grid-item">
+			<p class="p-bold">PlayStation</p>
+			<img src="~/images/ps_section.png" alt="PlayStation">
+		
+		</div>
+	</a>
+	<a class="navbar-brand" asp-area="" asp-controller="Gaming" asp-action="Xbox">
+		<div class="grid-item">
+			<p class="p-bold">Xbox</p>
+			<img src="~/images/xb_section.png" alt="Xbox">
+		</div>
+	</a>
+	<a class="navbar-brand" asp-area="" asp-controller="Gaming" asp-action="Nintendo">
+		<div class="grid-item">
+		
+			<p class="p-bold">Nintendo</p>
+			<img src="~/images/nt_section.png" alt="Nintendo">
+		</div>
+	</a>
+</div>
