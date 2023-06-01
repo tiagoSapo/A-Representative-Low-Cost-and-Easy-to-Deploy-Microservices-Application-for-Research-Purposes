@@ -65,7 +65,7 @@ __Note__: __Windows 10 and Windows 11__ 🪟 users should use _Windows Subsystem
 /terraform-scripts/publicitaki/executables
 /terraform-scripts/store/executables
 ```
-- __Step 12__: Go to the __terraform-scripts__ folder. Make sure that you compiled each microservice. and run the deploy script:<br>
+- __Step 12__: Go to the __terraform-scripts__ folder and run the deploy script:<br>
 ```
 cd terraform-scripts
 ./deploy_to_aws.sh
