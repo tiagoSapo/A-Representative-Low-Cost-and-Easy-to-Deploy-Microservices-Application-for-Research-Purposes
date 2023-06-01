@@ -76,9 +76,9 @@ cd terraform-scripts
 
 ## Notes
 (_Optional_) To __add new products__ to the __Store__, you should go to the __Store-Products__ microservice and do the following:
-- Add a category, for example "Playstation", on this URL: `<host:port>/categories`;
-- Add a brand, for example "SONY", on this URL: `<host:port>/brands`;
-- Add a product, for example "Resident Evil 4 Remake", on this URL: `<host:port>/products`.
+- Add a __category__, for example "Playstation", on this URL: `<aws-endpoint-for-store-products>/categories`;
+- Add a __brand__, for example "SONY", on this URL: `<aws-endpoint-for-store-products>/brands`;
+- Add a __product__, for example "Resident Evil 4 Remake", on this URL: `<aws-endpoint-for-store-products>/products`.
 
 
 
