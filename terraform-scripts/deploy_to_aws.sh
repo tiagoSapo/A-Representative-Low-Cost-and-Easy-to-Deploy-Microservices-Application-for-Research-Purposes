@@ -3,27 +3,31 @@
 # Prompt the user for variable values
 read -p "Enter the Databases' username: " db_username
 read -p "Enter the Databases' password: " db_password
-read -p "Enter the IPs authorized to access the Databases [default: 0.0.0.0/0]: " db_ip_permission
-db_ip_permission=${db_ip_permission:-0.0.0.0/0} # Set default if empty
-read -p "Enter the IPs authorized to access SSH [default: 0.0.0.0/0]: " ssh_ip_permission
-ssh_ip_permission=${ssh_ip_permission:-0.0.0.0/0} # Set default if empty
+
+# Validate input
+if [[ -z $db_username || -z $db_password ]]; then
+    echo "Invalid input. Please provide a non-empty username and password."
+    exit 1
+fi
+
+if [[ ${#db_username} -lt 8 || ${#db_password} -lt 8 ]]; then
+    echo "Invalid input. Username and password must have a minimum length of 8 characters."
+    exit 1
+fi
 
 # Run the Terraform apply command with the user-provided values
 
 # BANK SYSTEM
 cd bank
-terraform init
-terraform apply -var="bank_db_username=$db_username" -var="bank_db_password=$db_password" -var="bank_db_ip_permission=$db_ip_permission" -var="bank_ssh_ip_permission=$ssh_ip_permission" -auto-approve
+terraform init && terraform apply -var="bank_db_username=$db_username" -var="bank_db_password=$db_password" -auto-approve || exit 1
 
 # STORE SYSTEM
 cd ../store
-terraform init
-terraform apply -var="store_db_username=$db_username" -var="store_db_password=$db_password" -var="store_db_ip_permission=$db_ip_permission" -var="store_ssh_ip_permission=$ssh_ip_permission" -auto-approve
+terraform init && terraform apply -var="store_db_username=$db_username" -var="store_db_password=$db_password" -auto-approve || exit 1
 
 # PUBLICITAKI SYSTEM
 cd ../publicitaki
-terraform init
-terraform apply -var="pub_db_username=$db_username" -var="pub_db_password=$db_password" -var="pub_db_ip_permission=$db_ip_permission" -var="pub_ssh_ip_permission=$ssh_ip_permission" -auto-approve
+terraform init && terraform apply -var="pub_db_username=$db_username" -var="pub_db_password=$db_password" -auto-approve || exit 1
 
 #
 #   VERY IMPORTANT!!!
