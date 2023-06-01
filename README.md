@@ -71,7 +71,7 @@ cd terraform-scripts
 ./deploy_to_aws.sh
 ```
 <br>_After 10 to 20 minutes, the deployment should be complete._
-- __Step 13__: After the deployment is complete, go to __Elastic Beanstalk Environments__ and select the environment __Store-Users__ and select __Configuration__ on the left pane. Then in __Instance traffic and scaling__ select __Edit__ and add a new _LISTENER_ on __port 5000__. <br>After that, you should have a listener for __both__ ports 80 and 5000.
+- __Step 13__: After the deployment is complete, go to __Elastic Beanstalk Environments__ and select the environment __Store-Users__ and select __Configuration__ on the left pane. Then in __Instance traffic and scaling__ select __Edit__ and add a new _LISTENER_ on __port 5000__. Click __APPLY__. <br>After that, you should have a listener for __both__ ports 80 and 5000.
 - After __Step 13__ the application is ready to be used. To __UNDEPLOY__ run the following script: <br>`./undeploy_from_aws.sh`
 
 
