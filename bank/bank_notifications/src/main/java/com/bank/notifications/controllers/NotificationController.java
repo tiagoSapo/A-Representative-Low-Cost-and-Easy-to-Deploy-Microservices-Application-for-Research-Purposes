@@ -91,7 +91,7 @@ public class NotificationController {
 
     public ResponseEntity send(String msg, String email) {
 
-        /* POR AQUI O KAFKA*/
+        /* [Placeholder] Write the code to send a notification to the given email (SMTP) */
         return new ResponseEntity<>(msg, HttpStatus.OK);
     }
 }
