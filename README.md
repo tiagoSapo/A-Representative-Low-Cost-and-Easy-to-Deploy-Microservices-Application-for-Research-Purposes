@@ -75,11 +75,15 @@ cd terraform-scripts
 - After __Step 13__ the application is ready to be used. To __UNDEPLOY__ run the following script: <br>`./undeploy_from_aws.sh`
 
 ## Notes
-(_Optional_) To __add new products__ to the __Store__, you should go to the __Store-Products__ microservice and do the following:
+### Register PRODUCTS on Store and Publicitaki
+(_Optional_) To __add new products__ on the __Store__, you should go to the __Store-Products__ microservice and do the following:
 - Add a __category__, for example "Playstation", on this URL: `<aws-endpoint-for-store-products>/categories`;
 - Add a __brand__, for example "SONY", on this URL: `<aws-endpoint-for-store-products>/brands`;
 - Add a __product__, for example "Resident Evil 4 Remake", on this URL: `<aws-endpoint-for-store-products>/products`.
 
+(_Optional_) To __add new products__ on Publicitaki, you should go to the frontend of the website Publicitaki __Pub-Frontend__ and do the following:
+- Login as an __Admin__;
+- Go to __Account__ and select the option to add a new product;
 
 
 
