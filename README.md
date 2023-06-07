@@ -81,7 +81,7 @@ cd terraform-scripts
 - Add a __brand__, for example "SONY", on this URL: `<aws-endpoint-for-store-products>/brands`;
 - Add a __product__, for example "Resident Evil 4 Remake", on this URL: `<aws-endpoint-for-store-products>/products`.
 
-(_Optional_) To __add new products__ on Publicitaki, you should go to the frontend of the website Publicitaki __Pub-Frontend__ and do the following:
+(_Optional_) To __add new products__ on __Publicitaki__, you should go to the frontend of the website Publicitaki __Pub-Frontend__ and do the following:
 - Login as an __Admin__;
 - Go to __Account__ and select the option to add a new product;
 
