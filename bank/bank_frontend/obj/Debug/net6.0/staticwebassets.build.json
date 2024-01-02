@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "N+9CROWI4ec2bJ7ELDpD4FgbmZdjhoX3rRgb5U9C08Q=",
+  "Hash": "YFbi8ZOnHySKSTq9cz3xj+F94ldNFSaaShxyYhmWdvg=",
   "Source": "BankFrontend",
   "BasePath": "_content/BankFrontend",
   "Mode": "Default",
@@ -112,12 +112,12 @@
       "OriginalItemSpec": "wwwroot/images/chave.png"
     },
     {
-      "Identity": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/bank/bank_frontend/wwwroot/images/logo.png",
+      "Identity": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/bank/bank_frontend/wwwroot/images/logo.jpg",
       "SourceId": "BankFrontend",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/bank/bank_frontend/wwwroot/",
       "BasePath": "_content/BankFrontend",
-      "RelativePath": "images/logo.png",
+      "RelativePath": "images/logo.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -128,7 +128,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/logo.png"
+      "OriginalItemSpec": "wwwroot/images/logo.jpg"
     },
     {
       "Identity": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/bank/bank_frontend/wwwroot/js/site.js",

@@ -1,0 +1,361 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/obj/Debug/net6.0/scopedcss/projectbundle/StoreFrontendFinal.bundle.scp.css",
+      "PackagePath": "staticwebassets/StoreFrontendFinal.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/authentication-fail.png",
+      "PackagePath": "staticwebassets/images/authentication-fail.png"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/banner-nintendo.jpg",
+      "PackagePath": "staticwebassets/images/banner-nintendo.jpg"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/banner-playstation.jpg",
+      "PackagePath": "staticwebassets/images/banner-playstation.jpg"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/banner-xbox.jpg",
+      "PackagePath": "staticwebassets/images/banner-xbox.jpg"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/camera_section.jfif",
+      "PackagePath": "staticwebassets/images/camera_section.jfif"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/desktop_section.jpg",
+      "PackagePath": "staticwebassets/images/desktop_section.jpg"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/error.jpg",
+      "PackagePath": "staticwebassets/images/error.jpg"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/key.png",
+      "PackagePath": "staticwebassets/images/key.png"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/laptop_section.jpg",
+      "PackagePath": "staticwebassets/images/laptop_section.jpg"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/microwaves_section.jpg",
+      "PackagePath": "staticwebassets/images/microwaves_section.jpg"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/nt_section.png",
+      "PackagePath": "staticwebassets/images/nt_section.png"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/ovens_section.jpg",
+      "PackagePath": "staticwebassets/images/ovens_section.jpg"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/phone_section.jfif",
+      "PackagePath": "staticwebassets/images/phone_section.jfif"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/profile/profile.png",
+      "PackagePath": "staticwebassets/images/profile/profile.png"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/profile/profile_delete.png",
+      "PackagePath": "staticwebassets/images/profile/profile_delete.png"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/profile/profile_delete_2.png",
+      "PackagePath": "staticwebassets/images/profile/profile_delete_2.png"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/profile/profile_edit.png",
+      "PackagePath": "staticwebassets/images/profile/profile_edit.png"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/profile/profile_orders.jpg",
+      "PackagePath": "staticwebassets/images/profile/profile_orders.jpg"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/ps_section.png",
+      "PackagePath": "staticwebassets/images/ps_section.png"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/registration.png",
+      "PackagePath": "staticwebassets/images/registration.png"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/star.png",
+      "PackagePath": "staticwebassets/images/star.png"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/store_logo.jpg",
+      "PackagePath": "staticwebassets/images/store_logo.jpg"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/tv_section.jfif",
+      "PackagePath": "staticwebassets/images/tv_section.jfif"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/images/xb_section.png",
+      "PackagePath": "staticwebassets/images/xb_section.png"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/Users/tiago/A-Representative-Low-Cost-and-Easy-to-Deploy-Microservices-Application-for-Research-Purposes/store/store_frontend6/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.StoreFrontendFinal.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.build.StoreFrontendFinal.props",
+      "PackagePath": "build\\StoreFrontendFinal.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.StoreFrontendFinal.props",
+      "PackagePath": "buildMultiTargeting\\StoreFrontendFinal.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.StoreFrontendFinal.props",
+      "PackagePath": "buildTransitive\\StoreFrontendFinal.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
