@@ -10,7 +10,7 @@ namespace BankFrontend.Models
         public double amount { get; set; } /* sum of money */
         public string date { get; set; } /* date of the transaction */
 
-        /* Optinal fields */
+        /* Optional fields */
         public int? orderId { get; set; } /* store's order id [OPTINAL!]*/
         public string? confirmationTopic { get; set; } /* store's confirmation topic [OPTINAL!]*/
 

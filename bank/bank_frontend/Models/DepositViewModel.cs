@@ -8,12 +8,12 @@ namespace BankFrontend.Models
 	public class DepositViewModel
 	{
 
-        [DisplayName("Titular da conta")]
+        [DisplayName("Account holder")]
         public List<SelectListItem> Accounts { get; set; }
 
-        [DisplayName("Montante (em euros €)")]
-        [Range(-1000000, 1000000, ErrorMessage = "O montante não deverá ser superior a 1000000€")]
-        [Required(ErrorMessage = "O montante é obrigatório")]
+        [DisplayName("Amount (in euros €)")]
+        [Range(-1000000, 1000000, ErrorMessage = "The amount shouldn't be superior to 1000000€")]
+        [Required(ErrorMessage = "The amount field is mandatory")]
         public double Amount { get; set; }
 
         public string Id { get; set; }

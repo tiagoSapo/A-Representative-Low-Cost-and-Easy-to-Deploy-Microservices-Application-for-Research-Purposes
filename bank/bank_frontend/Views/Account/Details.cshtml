@@ -1,13 +1,13 @@
 ﻿@model BankFrontend.Models.Account
 
 @{
-    ViewData["Title"] = "Detalhes";
+    ViewData["Title"] = "Details";
 }
 
-<h1>Detalhes</h1>
+<h1>Details</h1>
 
 <div>
-    <h4>Conta</h4>
+    <h4>Account</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -37,6 +37,6 @@
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Editar", "Edit", new { id = Model.id }) |
-    <a asp-action="Index">Regressar à página principal</a>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    <a asp-action="Index">Go back to homepage</a>
 </div>

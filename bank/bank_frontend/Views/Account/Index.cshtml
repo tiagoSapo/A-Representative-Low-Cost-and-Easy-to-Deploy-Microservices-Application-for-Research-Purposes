@@ -1,16 +1,16 @@
 ﻿@model IEnumerable<BankFrontend.Models.Account>
 
 @{
-    ViewData["Title"] = "Contas";
+    ViewData["Title"] = "Accounts";
 }
 
-<h1>Contas</h1>
+<h1>Account</h1>
 <div style="display:flex">
     <a asp-action="Create">
-        <input type="button" class="btn btn-info " style="margin-right:10px;" runat="server" value="Criar conta" />
+        <input type="button" class="btn btn-info " style="margin-right:10px;" runat="server" value="Create account" />
     </a>
     <a asp-action="Deposit">
-        <input type="button" class="btn btn-warning " runat="server" value="Depositar via MQTT (Async)" />
+        <input type="button" class="btn btn-warning " runat="server" value="Make a deposit via MQTT (Async)" />
     </a>
 </div>
 <br/>
@@ -50,9 +50,9 @@
                     @Html.DisplayFor(modelItem => item.balance)
                 </td>
                 <td>
-                    @Html.ActionLink("Editar", "Edit", new { id = item.id }) |
-                    @Html.ActionLink("Detalhes", "Details", new { id = item.id }) |
-                    @Html.ActionLink("Apagar", "Delete", new { id = item.id })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
                 </td>
             </tr>
         }

@@ -70,7 +70,7 @@ namespace BankFrontend.Controllers
             var accounts = RestUtils.ListAccounts();
             if (accounts == null)
             {
-                string msg = "Problema ao contactar com o backend para obter as contas";
+                string msg = "There is a problem contacting bank-clients microservice or there are no accounts registered yet";
                 TempData["Message"] = msg + " " + RestUtils.CLIENTS_SERVICE_URL;
                 _logger.LogWarning(msg);
 
@@ -78,7 +78,7 @@ namespace BankFrontend.Controllers
             }
             if (accounts.Count <= 0)
             {
-                string errorBackend = "Ainda nao existem registos de contas";
+                string errorBackend = "There are no registered accounts yet";
                 TempData["Message"] = errorBackend;
                 _logger.LogWarning(errorBackend);
 
@@ -97,7 +97,7 @@ namespace BankFrontend.Controllers
             var account = RestUtils.GetAccount(id);
             if (account == null)
             {
-                var error = string.Format("Problema ao contactar com o backend para obter a conta {0}", id);
+                var error = string.Format("Problem contacting bank-client microservice to fetch account: {0}", id);
                 _logger.LogWarning(error);
                 TempData["Message"] = error;
                 return RedirectToAction(nameof(Index));
@@ -126,7 +126,7 @@ namespace BankFrontend.Controllers
 
             if (!ModelState.IsValid)
             {
-                TempData["Message"] = string.Format("Conta com dados inválidos");
+                TempData["Message"] = string.Format("Account with invalid data");
                 return View();
             }
 
@@ -135,13 +135,13 @@ namespace BankFrontend.Controllers
                 string? result = RestUtils.SaveAccount(account);
                 if (result == null)
                 {
-                    TempData["Message"] = string.Format("Problema ao gravar a conta no backend");
+                    TempData["Message"] = string.Format("Problem saving account on microservice bank-clients");
                     return View();
                 }
             } 
             catch (Exception ex)
             {
-                TempData["Message"] = string.Format("Não foi possível contactar o serviço de backend \"BankClients\": {0}", ex);
+                TempData["Message"] = string.Format("Problem reaching \"Bank-clients\" microservice: {0}", ex);
                 return View();
             }
 
@@ -157,7 +157,7 @@ namespace BankFrontend.Controllers
             var account = RestUtils.GetAccount(id);
             if (account == null)
             {
-                string errorBackend = string.Format("Problema ao contactar com o backend para obter a conta {0}", id);
+                string errorBackend = string.Format("Problem contacting bank-clients to fetch account: {0}", id);
                 _logger.LogWarning(errorBackend);
                 TempData["Message"] = errorBackend;
                 return RedirectToAction(nameof(Index));
@@ -193,7 +193,7 @@ namespace BankFrontend.Controllers
             var account = RestUtils.GetAccount(id);
             if (account == null)
             {
-                string errorBackend = string.Format("Problema ao contactar com o backend para obter a conta {0}", id);
+                string errorBackend = string.Format("Problem contacting bank-clients to fetch account: {0}", id);
                 _logger.LogWarning(errorBackend);
                 TempData["Message"] = errorBackend;
                 return RedirectToAction(nameof(Index));
@@ -230,14 +230,14 @@ namespace BankFrontend.Controllers
             var accounts = RestUtils.ListAccounts();
             if (accounts == null)
             {
-                string errorBackend = "Problema ao contactar com o backend para obter as contas";
+                string errorBackend = "Problem contacting bank-clients to fetch accounts";
                 TempData["Message"] = errorBackend;
                 _logger.LogWarning(errorBackend);
                 return RedirectToAction(nameof(Index));
             }
             if (accounts.Count <= 0)
             {
-                string errorBackend = "Ainda nao existem registos de contas";
+                string errorBackend = "There are no accounts yet";
                 TempData["Message"] = errorBackend;
                 _logger.LogWarning(errorBackend);
 
@@ -270,8 +270,8 @@ namespace BankFrontend.Controllers
 
             if (!ModelState.IsValid)
             {
-                _logger.LogInformation("Modelo invalido");
-                TempData["Message"] = "Modelo invalido";
+                /*_logger.LogInformation("Invalid model");*/
+                TempData["Message"] = "Invalid model";
                 return RedirectToAction(nameof(Index));
             }
 
@@ -284,7 +284,7 @@ namespace BankFrontend.Controllers
                     amount = depositViewModel.Amount
                 };
 
-                _logger.LogInformation("Mensagem a enviar para o MQTT: " + Message.ToString());
+                _logger.LogInformation("Message about to be sent to MQTT: " + Message.ToString());
 
                 
                 // Convert Message to JSON
@@ -304,7 +304,7 @@ namespace BankFrontend.Controllers
             }
             catch (Exception ex)
             {
-                string msg = string.Format("Problema enviar o pedido de deposito para o MQTT: {0}", ex);
+                string msg = string.Format("Problem sending the deposit request to MQTT: {0}", ex);
                 _logger.LogWarning(msg);
                 TempData["Message"] = msg;
             }

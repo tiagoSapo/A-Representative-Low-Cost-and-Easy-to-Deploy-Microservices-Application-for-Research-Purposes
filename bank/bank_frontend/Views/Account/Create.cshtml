@@ -1,12 +1,12 @@
 ﻿@model BankFrontend.Models.Account
 
 @{
-    ViewData["Title"] = "Criar conta";
+    ViewData["Title"] = "Create account";
 }
 
-<h1>Criar conta</h1>
+<h1>Create account</h1>
 
-<h4>Conta</h4>
+<h4>Account</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -31,14 +31,14 @@
             </div>
             <div class="form-group">
                 <br />
-                <input type="submit" value="Criar" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Regressar à página principal</a>
+    <a asp-action="Index">Go back to homepage</a>
 </div>
 
 @if (ViewBag.Message != null)

@@ -1,14 +1,14 @@
 ﻿@model BankFrontend.Models.Account
 
 @{
-    ViewData["Title"] = "Apagar";
+    ViewData["Title"] = "Delete";
 }
 
-<h1>Apagar</h1>
+<h1>Delete</h1>
 
-<h3>Tem a certeza que quer apagar esta conta?</h3>
+<h3>Are you sure that you want to delete this account?</h3>
 <div>
-    <h4>Conta</h4>
+    <h4>Account</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -47,7 +47,7 @@
     }
 
     <form asp-action="Delete">
-        <input type="submit" value="Apagar" class="btn btn-danger" /> |
-        <a asp-action="Index">Regressar à página principal</a>
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Go back to homepage</a>
     </form>
 </div>

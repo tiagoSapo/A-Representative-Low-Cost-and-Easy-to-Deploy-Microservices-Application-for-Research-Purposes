@@ -1,19 +1,19 @@
 ﻿@model BankFrontend.Models.DepositViewModel
 
 @{
-    ViewData["Title"] = "Depositar";
+    ViewData["Title"] = "Deposit";
 }
 
-<h1>Depositar</h1>
+<h1>Deposit</h1>
 
-<h4>Conta</h4>
+<h4>Account</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Deposit">
 
             <div class="form-group">
-                <label for="itemSelect">Titular da conta</label>
+                <label for="itemSelect">Account holder</label>
                 @Html.DropDownListFor(model => model.Id, Model.Accounts)
             </div>
 
@@ -26,14 +26,14 @@
             </div>
             <div class="form-group">
                 <br />
-                <input type="submit" value="Depositar" class="btn btn-primary" />
+                <input type="submit" value="Deposit" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Regressar à página principal</a>
+    <a asp-action="Index">Go back to homepage</a>
 </div>
 
 @if (ViewBag.Message != null)

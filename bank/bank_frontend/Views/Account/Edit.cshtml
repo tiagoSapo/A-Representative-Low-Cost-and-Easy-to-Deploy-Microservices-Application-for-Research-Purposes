@@ -1,12 +1,12 @@
 ﻿@model BankFrontend.Models.Account
 
 @{
-    ViewData["Title"] = "Editar";
+    ViewData["Title"] = "Edit";
 }
 
-<h1>Editar</h1>
+<h1>Edit</h1>
 
-<h4>Conta</h4>
+<h4>Account</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -28,14 +28,14 @@
                 <span asp-validation-for="balance" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Guardar" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Regressar à página principal</a>
+    <a asp-action="Index">Go back to homepage</a>
 </div>
 
 @section Scripts {

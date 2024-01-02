@@ -8,22 +8,22 @@ namespace BankFrontend.Models
     {
         
         [Key]
-        [DisplayName("Número de conta")]
+        [DisplayName("Account number")]
         public long id { get; set; }
 
-        [DisplayName("Nome")]
-        [StringLength(100, ErrorMessage = "Até 100 caracteres")]
-        [Required(ErrorMessage = "O nome é obrigatório")]
+        [DisplayName("Name")]
+        [StringLength(100, ErrorMessage = "100 characters max")]
+        [Required(ErrorMessage = "Name is mandatory")]
         public string? holderName { get; set; }
 
-        [DisplayName("Endereço de e-mail")]
-        [Required(ErrorMessage = "O e-mail é obrigatório")]
-        [EmailAddress(ErrorMessage = "Endereço de e-mail inválido!")]
+        [DisplayName("E-mail address")]
+        [Required(ErrorMessage = "E-mail address is mandatory")]
+        [EmailAddress(ErrorMessage = "Invalid E-mail address")]
         public string? holderEmail { get; set; }
 
-        [DisplayName("Montante (em euros €)")]
-        [Range(-1000000, 1000000, ErrorMessage = "O montante não deverá ser superior a 1000000€")]
-        [Required(ErrorMessage = "O montante é obrigatório")]
+        [DisplayName("Amount (in euros €)")]
+        [Range(-1000000, 1000000, ErrorMessage = "The amount shouldn't be superior to 1000000€")]
+        [Required(ErrorMessage = "The amount field is mandatory")]
         public double balance { get; set; }
 
         public override string ToString()

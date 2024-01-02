@@ -48,13 +48,13 @@ namespace BankFrontend.Controllers
 
             if (!ModelState.IsValid)
             {
-                ViewBag.Message = "Falha interna do C#";
+                ViewBag.Message = "Internal C# error - ModelState is not valid";
                 return View(new AuthenticationViewModel());
             }
 
             if (!(auth.Name.Equals("admin") && auth.Password.Equals("admin")))
             {
-                ViewBag.Message = "Credenciais invalidas (usar ADMIN ADMIN)";
+                ViewBag.Message = "Invalid credentials"; /* (you should use user:ADMIN password:ADMIN) */
                 return View(new AuthenticationViewModel());
             }
 

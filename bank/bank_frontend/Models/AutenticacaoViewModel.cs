@@ -8,12 +8,12 @@ namespace FrontEndP128.Models
 {
     public class AuthenticationViewModel
     {
-        [Display(Name = "Nome")]
-        [Required(ErrorMessage = "O nome de utilizador é obrigatório")]
+        [Display(Name = "Name")]
+        [Required(ErrorMessage = "Account name mandatory")]
         public string Name { get; set; }
 
-        [Display(Name = "Palavra-passe")]
-        [Required(ErrorMessage = "A palavra-passe é obrigatória")]
+        [Display(Name = "Password")]
+        [Required(ErrorMessage = "Password mandatory")]
         public string Password { get; set; }
 
         public AuthenticationViewModel()
