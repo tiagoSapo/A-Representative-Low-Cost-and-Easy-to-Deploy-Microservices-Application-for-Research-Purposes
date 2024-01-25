@@ -85,5 +85,6 @@ cd terraform-scripts
 - Login as an __Admin__;
 - Go to __Account__ and select the option to add a new product;
 
-![Context diagram](application-c4-diagrams/c1.pdf)
+## Application diagrams
+The application C4 diagrams, can be found in the "application-c4-diagrams" folder.
 
