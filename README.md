@@ -85,5 +85,5 @@ cd terraform-scripts
 - Login as an __Admin__;
 - Go to __Account__ and select the option to add a new product;
 
-![Context diagram](./application-c4-diagrams/c1.pdf)
+![Context diagram](application-c4-diagrams/c1.pdf)
 
