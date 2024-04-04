@@ -1,0 +1,53 @@
+library(ggplot2)
+
+data <- read.csv("/Users/tiago/Desktop/nova experiencia 20DEZ/store-1h-1000-Infinite/products/cpu.csv")
+theme_set(
+  theme_classic() +
+    theme(legend.position = "top")
+)
+
+# Create a vector of DateAndTime starting from 300, increasing by 300
+data$DateAndTime <- seq(from = 300, by = 300, length.out = nrow(data))
+
+# Criar um vetor de formas associadas a cada instância
+shapes <- c("1st Instance" = 16, "2nd Instance" = 17, "3rd Instance" = 18, "4th Instance" = 19, "5th Instance" = 20, "6th Instance" = 21)
+
+# Plotar os dados usando ggplot2
+p <- ggplot(data, aes(x = DateAndTime)) +
+  geom_line(aes(y = Instance.A, color = "1st Instance", shape = "1st Instance"), size = 1, linetype = "solid") +
+  geom_point(aes(y = Instance.A, color = "1st Instance", shape = "1st Instance"), size = 2) +
+  
+  geom_line(aes(y = Instance.B, color = "2nd Instance", shape = "2nd Instance"), size = 1, linetype = "dashed") +
+  geom_point(aes(y = Instance.B, color = "2nd Instance", shape = "2nd Instance"), size = 2) +
+  
+  geom_line(aes(y = Instance.C, color = "3rd Instance", shape = "3rd Instance"), size = 1, linetype = "dotted") +
+  geom_point(aes(y = Instance.C, color = "3rd Instance", shape = "3rd Instance"), size = 2) +
+  
+  geom_line(aes(y = Instance.D, color = "4th Instance", shape = "4th Instance"), size = 1, linetype = "dotdash") +
+  geom_point(aes(y = Instance.D, color = "4th Instance", shape = "4th Instance"), size = 2) +
+  
+  geom_line(aes(y = Instance.E, color = "5th Instance", shape = "5th Instance"), size = 1, linetype = "solid") +
+  geom_point(aes(y = Instance.E, color = "5th Instance", shape = "5th Instance"), size = 2) +
+  
+  geom_line(aes(y = Instance.F, color = "6th Instance", shape = "6th Instance"), size = 1, linetype = "dashed") +
+  geom_point(aes(y = Instance.F, color = "6th Instance", shape = "6th Instance"), size = 2) +
+  
+  labs(title = "",
+       x = "Elapsed Time (seconds)",
+       y = "CPU usage (percentage)",
+       color = "Legend") +
+  theme_minimal() +
+  scale_color_manual(values = c("1st Instance" = "#56B4E9", "2nd Instance" = "#66C2A5", "3rd Instance" = "#999999", "4th Instance" = "#E69F00", "5th Instance" = "#D55E00", "6th Instance" = "#0072B2")) +
+  theme_classic() +
+  theme(legend.position = "top") +
+  theme(legend.box = "horizontal", legend.box.just = "center", legend.margin = margin(t = 0, unit = "pt")) +
+  scale_y_continuous(limits = c(0, 30)) +
+  guides(shape = guide_legend(override.aes = list(color = c("#56B4E9", "#66C2A5", "#999999", "#E69F00", "#D55E00", "#0072B2")),
+                              title = "Legend"))
+
+
+
+# Salvar o gráfico como um PDF com uma resolução de 1024x768, largura reduzida e altura reduzida mantendo a proporção
+ggsave("/Users/tiago/Desktop/nova experiencia 20DEZ/store-1h-1000-Infinite/products/cpu.pdf", plot = p, width = 6, height = 4.75, units = "in", dpi = 300)
+
+print(p)
