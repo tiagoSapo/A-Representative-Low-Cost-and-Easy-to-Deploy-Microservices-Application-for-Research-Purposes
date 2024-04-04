@@ -11,7 +11,7 @@ The project is structured around __three__ subsystems:
 <br> __Communication__: 
 - REST
 - gRPC
-- Publish/Subscribe pattern (banking trasactions) 
+- Publish/Subscribe pattern (banking transactions) 
 
 <br> __Database management systems used__: 
 - PostgreSQL
@@ -59,7 +59,7 @@ __Note__: __Windows 10 and Windows 11__ 🪟 users should use _Windows Subsystem
 `terraform --version`
 - __Step 11__: (_Optional_) Compile each microservice for each system and put them in the corresponding directories:
 ```
-// make sure that you create the EXECUTABLES FOLDERS
+//Make sure that you create the EXECUTABLES FOLDERS
 
 /terraform-scripts/bank/executables
 /terraform-scripts/publicitaki/executables
@@ -77,14 +77,17 @@ cd terraform-scripts
 ## Notes
 ### Register PRODUCTS on Store and Publicitaki
 (_Optional_) To __add new products__ on the __Store__, you should go to the __Store-Products__ microservice and do the following:
-- Add a __category__, for example "Playstation", on this URL: `<aws-endpoint-for-store-products>/categories`;
+- Add a __category__, for example, "Playstation", on this URL: `<aws-endpoint-for-store-products>/categories`;
 - Add a __brand__, for example "SONY", on this URL: `<aws-endpoint-for-store-products>/brands`;
-- Add a __product__, for example "Resident Evil 4 Remake", on this URL: `<aws-endpoint-for-store-products>/products`.
+- Add a __product__, for example, "Resident Evil 4 Remake", on this URL: `<aws-endpoint-for-store-products>/products`.
 
 (_Optional_) To __add new products__ on __Publicitaki__, you should go to the frontend of the website Publicitaki __Pub-Frontend__ and do the following:
 - Login as an __Admin__;
 - Go to __Account__ and select the option to add a new product;
 
-## Application diagrams
-The application C4 diagrams, can be found in the "application-c4-diagrams" folder.
+## Application Architecture diagrams
+The application C4 diagrams are in the "extras/application-c4-diagrams" folder.
+
+## Locust and Amazon AWS (CPU / Network-out) charts
+The application's Locust and Amazon AWS charts are in the "extras/charts" folder.
 
