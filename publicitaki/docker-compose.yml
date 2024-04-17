@@ -1,0 +1,99 @@
+version: '3'
+services:
+
+  #---- NOTIFICATIONS SERVICE [NodeJS] ----
+  pub-notifications-db:
+    image: mongo:latest
+    command: mongod --quiet --logpath /dev/null
+    container_name: pub_notifications_db
+    restart: always
+    ports:
+      - "7000:27017"
+    volumes:
+      - ./pub-notifications-db/data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=notifications-db
+
+  pub-notifications:
+    build: ./pub-notifications
+    container_name: pub_notifications
+    depends_on:
+      - pub-notifications-db
+    restart: on-failure
+    ports:
+      - "7001:3000"
+    environment:
+      - MONGODB_URI=mongodb://pub-notifications-db:27017/notification-db
+
+  # ---- USERS SERVICE [NodeJS] ----
+  pub-users-db:
+    image: postgres:15.2-alpine
+    container_name: pub_users_db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: users-db
+      POSTGRES_SSLMODE: disable
+    ports:
+      - "7002:5432"
+    volumes:
+      - ./pub-users-db/postgresql.conf:/etc/postgresql.conf
+      - ./pub-users-db/pg-data:/var/lib/postgresql/data
+
+  pub-users:
+    build: ./pub-users
+    container_name: pub_users
+    depends_on:
+      - pub-users-db
+    restart: on-failure
+    ports:
+      - "7003:3000"
+    environment:
+      - POSTGRES_URI=postgres://admin:admin@pub-users-db:5432/users-db
+
+  #---- PRODUCTS SERVICE [Quarkus] ----
+  pub-products-db:
+    image: mysql:8.0.32
+    container_name: pub_products_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: products_db
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    ports:
+      - "7004:3306"
+    volumes:
+      - ./pub-products-db:/var/lib/mysql
+
+  pub-products:
+    build: ./pub-products
+    container_name: pub_products
+    depends_on:
+      - pub-products-db
+    restart: always
+    ports:
+      - "7005:8080"
+    environment:
+      DB_ENGINE: mysql
+      DB_HOST: pub-products-db
+      DB_PORT: 3306
+      DB_NAME: products_db
+      DB_USER: admin
+      DB_PASSWORD: admin
+    volumes:
+      - ./pub-products/.m2:/.m2
+      - ./pub-products/target:/work/target
+      - ./pub-products/images:/deployments/images
+
+  #---- FRONTEND SERVICE [React + Vite] ----
+  pub-frontend:
+    depends_on:
+      - pub-products
+      - pub-notifications
+      - pub-users
+    build: ./pub-frontend
+    container_name: pub_frontend
+    restart: on-failure
+    ports:
+      - "7006:5173"
+      - "7007:3000"

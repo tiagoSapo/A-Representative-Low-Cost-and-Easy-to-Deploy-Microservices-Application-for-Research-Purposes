@@ -1,0 +1,116 @@
+version: '3'
+services:
+
+  #---- NOTIFICATIONS SERVICE [Python] ----
+  store-notifications-db:
+    image: postgres:15.2-alpine
+    container_name: store_notifications_db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: notifications-db
+    ports:
+      - "5000:5432"
+    volumes:
+      - ./store_notifications_db:/var/lib/postgresql/data/
+
+  store-notifications:
+    build: ./store_notifications
+    container_name: store_notifications
+    links:
+      - store-notifications-db
+    depends_on:
+      - store-notifications-db
+    restart: on-failure
+    ports:
+      - "5001:8000"
+    command: sh -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    environment:
+      DB_ENGINE: django.db.backends.postgresql
+      DB_HOST: store-notifications-db
+      DB_PORT: 5432
+      DB_NAME: notifications-db
+      DB_USER: admin
+      DB_PASSWORD: admin
+
+  # ---- USERS SERVICE [Java] ----
+  store-users-db:
+    image: postgres:15.2-alpine
+    container_name: store_users_db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: users-db
+      POSTGRES_SSLMODE: disable
+    ports:
+      - "5002:5432"
+    volumes:
+      - ./store_users_db:/var/lib/postgresql/data/
+
+  store-users:
+    build: ./store_users
+    container_name: store_users
+    links:
+      - store-users-db
+    depends_on:
+      - store-users-db
+    restart: on-failure
+    ports:
+      - "5003:50051"
+    environment:
+      - DB_ENGINE=org.postgresql.Driver
+      - DB_HOST=store-users-db
+      - DB_PORT=5432
+      - DB_NAME=users-db
+      - DB_USER=admin
+      - DB_PASSWORD=admin
+    command: bash -c "mvn exec:java -DDB_ENGINE=${DB_ENGINE} -DDB_HOST=${DB_HOST} -DDB_PORT=${DB_PORT} -DDB_NAME=${DB_NAME} -DDB_USER=${DB_USER} -DDB_PASSWORD=${DB_PASSWORD}"
+    volumes:
+      - ./store_users/m2:/root/.m2
+
+  #---- PRODUCTS SERVICE [Python] ----
+  store-products-db:
+    image: mysql:8.0.32
+    container_name: store_products_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: products_db
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    ports:
+      - "5004:3306"
+    volumes:
+      - ./store_products_db:/var/lib/mysql
+
+  store-products:
+    build: ./store_products
+    container_name: store_products
+    links:
+      - store-products-db
+    depends_on:
+      - store-products-db
+    restart: on-failure
+    ports:
+      - "5005:8000"
+    command: sh -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000 --noreload"
+    environment:
+      DB_ENGINE: django.db.backends.mysql
+      DB_HOST: store-products-db
+      DB_PORT: 3306
+      DB_NAME: products_db
+      DB_USER: admin
+      DB_PASSWORD: admin
+    volumes:
+      - ./store_products/app/media:/app/media
+
+  #---- FRONTEND SERVICE [C#] ----
+  store-frontend:
+    depends_on:
+      - store-products
+      - store-notifications
+      - store-users
+    build: ./store_frontend
+    container_name: store_frontend
+    restart: on-failure
+    ports:
+      - 5006:80
