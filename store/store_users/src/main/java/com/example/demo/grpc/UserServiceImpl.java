@@ -60,7 +60,7 @@ public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase {
 
         // Set default values if environment variables are not set
         if (jdbcUrl == null) {
-            jdbcUrl = "jdbc:postgresql://localhost:5432/";
+            jdbcUrl = "jdbc:postgresql://store-users-db:5432/";
         } else {
             jdbcUrl = "jdbc:postgresql://" + jdbcUrl + "/";
         }

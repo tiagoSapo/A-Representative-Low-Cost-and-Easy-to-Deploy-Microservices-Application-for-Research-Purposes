@@ -4,19 +4,19 @@ services:
   #---- NOTIFICATIONS SERVICE [Python] ----
   store-notifications-db:
     image: postgres:15.2-alpine
-    container_name: store_notifications_db
+    container_name: store-notifications-db
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
       POSTGRES_DB: notifications-db
     ports:
-      - "5000:5432"
+      - "5007:5432"
   #  volumes:
   #    - ./store_notifications_db:/var/lib/postgresql/data/
 
   store-notifications:
     build: ./store_notifications
-    container_name: store_notifications
+    container_name: store-notifications
     links:
       - store-notifications-db
     depends_on:
@@ -36,7 +36,7 @@ services:
   # ---- USERS SERVICE [Java] ----
   store-users-db:
     image: postgres:15.2-alpine
-    container_name: store_users_db
+    container_name: store-users-db
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
@@ -49,7 +49,7 @@ services:
 
   store-users:
     build: ./store_users
-    container_name: store_users
+    container_name: store-users
     links:
       - store-users-db
     depends_on:
@@ -64,14 +64,14 @@ services:
       - DB_NAME=users-db
       - DB_USER=admin
       - DB_PASSWORD=admin
-    command: bash -c "mvn exec:java -DDB_ENGINE=${DB_ENGINE} -DDB_HOST=${DB_HOST} -DDB_PORT=${DB_PORT} -DDB_NAME=${DB_NAME} -DDB_USER=${DB_USER} -DDB_PASSWORD=${DB_PASSWORD}"
+    command: bash -c "mvn exec:java -Dexec.mainClass=com.example.demo.DemoApplication -DDB_ENGINE=${DB_ENGINE} -DDB_HOST=${DB_HOST} -DDB_PORT=${DB_PORT} -DDB_NAME=${DB_NAME} -DDB_USER=${DB_USER} -DDB_PASSWORD=${DB_PASSWORD}"
     volumes:
       - ./store_users/m2:/root/.m2
 
   #---- PRODUCTS SERVICE [Python] ----
   store-products-db:
     image: mysql:8.0.32
-    container_name: store_products_db
+    container_name: store-products-db
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: products_db
@@ -84,7 +84,7 @@ services:
 
   store-products:
     build: ./store_products
-    container_name: store_products
+    container_name: store-products
     links:
       - store-products-db
     depends_on:
@@ -100,6 +100,7 @@ services:
       DB_NAME: products_db
       DB_USER: admin
       DB_PASSWORD: admin
+      DB_URL: store-products-db:3306
     volumes:
       - ./store_products/app/media:/app/media
 
@@ -110,7 +111,7 @@ services:
       - store-notifications
       - store-users
     build: ./store_frontend
-    container_name: store_frontend
+    container_name: store-frontend
     restart: on-failure
     ports:
       - 5006:80

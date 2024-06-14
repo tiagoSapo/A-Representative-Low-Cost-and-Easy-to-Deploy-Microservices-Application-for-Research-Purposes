@@ -43,7 +43,7 @@ services:
       - bank-notifications
       - bank-clients
     build: ./bank_frontend
-    container_name: bank_frontend
+    container_name: bank-frontend
     restart: on-failure
     ports:
       - 6003:80

@@ -7,3 +7,6 @@ WORKDIR /app
 # Copy the jar file into our app
 COPY . /app
 
+RUN mvn package
+
+ENTRYPOINT ["java", "-jar", "./target/demo-0.0.1-SNAPSHOT.jar"]
