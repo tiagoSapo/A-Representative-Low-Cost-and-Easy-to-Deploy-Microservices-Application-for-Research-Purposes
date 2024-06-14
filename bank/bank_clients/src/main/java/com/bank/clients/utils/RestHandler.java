@@ -21,7 +21,7 @@ public class RestHandler {
     
     /** links to Notification Service **/
     private static final String IP = "bank-notifications";
-    private static final String PORT = "8080";
+    private static final String PORT = "5000";
     private static final String URL = "http://" + IP + ":" + PORT + "/";
     private static final String CREATE_URL = "create";
     private static final String UPDATE_URL = "update";

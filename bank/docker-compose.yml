@@ -3,7 +3,7 @@ services:
 
   bank-db:
     image: mysql:8.0.32
-    container_name: bank_db
+    container_name: bank-db
     environment:
       MYSQL_ROOT_PASSWORD: 4242
       MYSQL_DATABASE: bank_clients
@@ -12,30 +12,30 @@ services:
     ports:
       - 6000:3306
     #volumes:
-    #  - ./bank_db:/var/lib/mysql
+    #  - ./bank-db:/var/lib/mysql
   
   bank-notifications:
     depends_on:
       - bank-db
     build: ./bank_notifications
-    container_name: bank_notifications
+    container_name: bank-notifications
     restart: on-failure
     ports:
-      - 6002:8080
+      - 6002:5000
 
   bank-clients:
     depends_on:
       - bank-db
       - bank-notifications
     build: ./bank_clients
-    container_name: bank_clients
+    container_name: bank-clients
     restart: on-failure
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://bank_db:3306/bank_clients
+      SPRING_DATASOURCE_URL: jdbc:mysql://bank-db:3306/bank_clients
       SPRING_DATASOURCE_USERNAME: tiago
       SPRING_DATASOURCE_PASSWORD: 4242
     ports:
-      - 6001:8080
+      - 6001:5000
 
   bank-frontend:
     depends_on:

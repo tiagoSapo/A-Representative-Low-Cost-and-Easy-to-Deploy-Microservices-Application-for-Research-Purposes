@@ -14,10 +14,10 @@ namespace BankFrontend.Utils
         */
         public static readonly string CLIENTS_SERVICE_URL = Environment.GetEnvironmentVariable("BANK_CLIENTS_URL") != null ?
             "http://" + Environment.GetEnvironmentVariable("BANK_CLIENTS_URL") :
-            "http://localhost:8080";
+            "http://bank-clients:5000";
         public static readonly string NOTIFICATIONS_SERVICE_URL = Environment.GetEnvironmentVariable("BANK_NOTIFICATIONS_URL") != null ?
             "http://" + Environment.GetEnvironmentVariable("BANK_NOTIFICATIONS_URL") :
-            "http://localhost:8080";
+            "http://bank-notifications:8080";
 
         /**
          * Funcao para realizar pedidos HTTP GET

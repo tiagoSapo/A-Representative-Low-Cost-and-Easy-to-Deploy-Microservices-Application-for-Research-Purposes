@@ -7,5 +7,8 @@ WORKDIR /app
 # Copy the jar file into our app
 COPY . /app
 
+# Expose the application's port
+EXPOSE 5000
+
 # Starting the application
-CMD ["java", "-jar", "notifications-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "./target/notifications-0.0.1-SNAPSHOT.jar"]

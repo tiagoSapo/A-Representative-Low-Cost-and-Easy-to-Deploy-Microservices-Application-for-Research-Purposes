@@ -85,6 +85,12 @@
             <version>2.2</version>
             <type>jar</type>
         </dependency>
+        <!-- Replace with latest version -->
+        <dependency>
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy</artifactId>
+            <version>1.14.17</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

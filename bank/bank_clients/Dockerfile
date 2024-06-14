@@ -18,7 +18,7 @@ ENV MYSQL_DATABASE=bank_clients
 RUN apt-get update && apt-get install -y mariadb-server
 
 # Expose the application's port
-EXPOSE 8080
+EXPOSE 5000
 
 # Start the application
 CMD ["java", "-jar", "app.jar"]
