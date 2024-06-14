@@ -11,8 +11,8 @@ services:
       MYSQL_PASSWORD: 4242
     ports:
       - 6000:3306
-    volumes:
-      - ./bank_db:/var/lib/mysql
+    #volumes:
+    #  - ./bank_db:/var/lib/mysql
   
   bank-notifications:
     depends_on:

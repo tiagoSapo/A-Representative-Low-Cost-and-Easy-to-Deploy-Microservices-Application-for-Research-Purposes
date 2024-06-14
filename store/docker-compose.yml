@@ -11,8 +11,8 @@ services:
       POSTGRES_DB: notifications-db
     ports:
       - "5000:5432"
-    volumes:
-      - ./store_notifications_db:/var/lib/postgresql/data/
+  #  volumes:
+  #    - ./store_notifications_db:/var/lib/postgresql/data/
 
   store-notifications:
     build: ./store_notifications
@@ -44,8 +44,8 @@ services:
       POSTGRES_SSLMODE: disable
     ports:
       - "5002:5432"
-    volumes:
-      - ./store_users_db:/var/lib/postgresql/data/
+  #  volumes:
+  #    - ./store_users_db:/var/lib/postgresql/data/
 
   store-users:
     build: ./store_users
@@ -79,8 +79,8 @@ services:
       MYSQL_PASSWORD: admin
     ports:
       - "5004:3306"
-    volumes:
-      - ./store_products_db:/var/lib/mysql
+  #  volumes:
+  #    - ./store_products_db:/var/lib/mysql
 
   store-products:
     build: ./store_products

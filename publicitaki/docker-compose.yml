@@ -9,8 +9,8 @@ services:
     restart: always
     ports:
       - "7000:27017"
-    volumes:
-      - ./pub-notifications-db/data:/data/db
+  #  volumes:
+  #    - ./pub-notifications-db/data:/data/db
     environment:
       - MONGO_INITDB_DATABASE=notifications-db
 
@@ -36,9 +36,9 @@ services:
       POSTGRES_SSLMODE: disable
     ports:
       - "7002:5432"
-    volumes:
-      - ./pub-users-db/postgresql.conf:/etc/postgresql.conf
-      - ./pub-users-db/pg-data:/var/lib/postgresql/data
+  #  volumes:
+  #    - ./pub-users-db/postgresql.conf:/etc/postgresql.conf
+  #    - ./pub-users-db/pg-data:/var/lib/postgresql/data
 
   pub-users:
     build: ./pub-users
@@ -62,8 +62,8 @@ services:
       MYSQL_PASSWORD: admin
     ports:
       - "7004:3306"
-    volumes:
-      - ./pub-products-db:/var/lib/mysql
+  #  volumes:
+  #    - ./pub-products-db:/var/lib/mysql
 
   pub-products:
     build: ./pub-products
