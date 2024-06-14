@@ -2,9 +2,9 @@ const Sequelize = require('sequelize');
 
 // Replace the values in the following variables with your MySQL database credentials and options
 const database = process.env.PUB_NOTIFICATIONS_DATABASE_NAME || 'notifications_db';
-const username = process.env.PUB_NOTIFICATIONS_DATABASE_USERNAME || 'postgres';
-const password = process.env.PUB_NOTIFICATIONS_DATABASE_PASSWORD || '42424242';
-const hostWithPort = process.env.PUB_NOTIFICATIONS_DATABASE_HOST || 'localhost:5432';
+const username = process.env.PUB_NOTIFICATIONS_DATABASE_USERNAME || 'admin';
+const password = process.env.PUB_NOTIFICATIONS_DATABASE_PASSWORD || 'admin';
+const hostWithPort = process.env.PUB_NOTIFICATIONS_DATABASE_HOST || 'pub-notifications-db:5432';
 const [host] = hostWithPort.split(':');
 const port = process.env.PUB_NOTIFICATIONS_DATABASE_PORT || '5432';
 

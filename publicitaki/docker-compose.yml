@@ -3,32 +3,38 @@ services:
 
   #---- NOTIFICATIONS SERVICE [NodeJS] ----
   pub-notifications-db:
-    image: mongo:latest
-    command: mongod --quiet --logpath /dev/null
-    container_name: pub_notifications_db
+    image: postgres:15.2-alpine
+    container_name: pub-notifications-db
     restart: always
-    ports:
-      - "7000:27017"
-  #  volumes:
-  #    - ./pub-notifications-db/data:/data/db
     environment:
-      - MONGO_INITDB_DATABASE=notifications-db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: notifications_db
+      POSTGRES_SSLMODE: disable
+    ports:
+      - "7008:5432"
 
   pub-notifications:
     build: ./pub-notifications
-    container_name: pub_notifications
+    container_name: pub-notifications
     depends_on:
       - pub-notifications-db
     restart: on-failure
     ports:
       - "7001:3000"
     environment:
-      - MONGODB_URI=mongodb://pub-notifications-db:27017/notification-db
+      - DB_ENGINE=org.postgresql.Driver
+      - DB_HOST=pub-notifications-db
+      - DB_PORT=5432
+      - DB_NAME=notifications_db
+      - DB_USER=admin
+      - DB_PASSWORD=admin
+
 
   # ---- USERS SERVICE [NodeJS] ----
   pub-users-db:
     image: postgres:15.2-alpine
-    container_name: pub_users_db
+    container_name: pub-users-db
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
@@ -42,7 +48,7 @@ services:
 
   pub-users:
     build: ./pub-users
-    container_name: pub_users
+    container_name: pub-users
     depends_on:
       - pub-users-db
     restart: on-failure
@@ -54,7 +60,7 @@ services:
   #---- PRODUCTS SERVICE [Quarkus] ----
   pub-products-db:
     image: mysql:8.0.32
-    container_name: pub_products_db
+    container_name: pub-products-db
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: products_db
@@ -67,7 +73,7 @@ services:
 
   pub-products:
     build: ./pub-products
-    container_name: pub_products
+    container_name: pub-products
     depends_on:
       - pub-products-db
     restart: always
@@ -92,7 +98,7 @@ services:
       - pub-notifications
       - pub-users
     build: ./pub-frontend
-    container_name: pub_frontend
+    container_name: pub-frontend
     restart: on-failure
     ports:
       - "7006:5173"
