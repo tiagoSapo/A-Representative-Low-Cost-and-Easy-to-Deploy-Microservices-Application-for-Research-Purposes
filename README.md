@@ -24,6 +24,7 @@ The project is structured around __three__ subsystems:
 - JavaScript (NodeJS, React with Vite)
 
 <br>
+
 ## Environment Setup and Installation - LOCAL (Docker) 🐋
 - __Step 1__: Download the source code from Github;
 - __Step 2__: Download and install **Docker** and **Docker-Compose** from the official website https://www.docker.com/get-started/;
@@ -33,6 +34,7 @@ The project is structured around __three__ subsystems:
 - __Step 6__: Access the frontend container on: http://localhost:6003 for the **Bank** 🏦, http://localhost:5006 for the **Store** 🛍️, and http://localhost:7007 for **Publicitaki** 📈;
 
 <br>
+
 ## Environment Setup and Installation - CLOUD (Amazon AWS) ☁️
 
 __Note__: __Windows 10 and Windows 11__ 🪟 users should use _Windows Subsystem for Linux (WSL)_ and follow the Linux commands.
