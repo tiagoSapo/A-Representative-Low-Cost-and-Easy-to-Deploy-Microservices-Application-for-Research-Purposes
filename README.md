@@ -28,8 +28,8 @@ The project is structured around __three__ subsystems:
 ## Environment Setup and Installation - LOCAL (Docker) 🐋
 - __Step 1__: Download the source code from Github;
 - __Step 2__: Download and install **Docker** and **Docker-Compose** from the official website https://www.docker.com/get-started/;
-- __Step 3__: Run docker-build.sh to build the containers;
-- __Step 4__: Run docker-run.sh to run the containers;
+- __Step 3__: Run `docker-build.sh` to build the containers;
+- __Step 4__: Run `docker-run.sh` to run the containers;
 - __Step 5__: (Optional) You can use the scripts in the "docker-scripts-for-data-insertion" folder to insert data samples.
 - __Step 6__: Access the frontend container on: http://localhost:6003 for the **Bank** 🏦, http://localhost:5006 for the **Store** 🛍️, and http://localhost:7007 for **Publicitaki** 📈;
 
@@ -87,6 +87,7 @@ cd terraform-scripts
 ./undeploy_from_aws.sh
 ```
 
+<br>
 
 ## Notes
 ### Register PRODUCTS on Store and Publicitaki
@@ -99,8 +100,12 @@ cd terraform-scripts
 - Login as an __Admin__;
 - Go to __Account__ and select the option to add a new product;
 
+<br>
+
 ## Application Architecture diagrams
 The application C4 diagrams are in the "extras/application-c4-diagrams" folder.
+
+<br>
 
 ## Locust and Amazon AWS (CPU / Network-out) charts
 The application's Locust and Amazon AWS charts are in the "extras/charts" folder.
