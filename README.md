@@ -1,7 +1,7 @@
 # Publicitaki-Store-Bank Systems
 
 ### Summary: 
-This project consists of __three__ _interconnected_ applications that __simulate real-life websites communicating with each other__. They can be run on the **Cloud** (**Amazon AWS**) using Terraform or locally via **Docker**.
+This project consists of __three__ _interconnected_ applications that __simulate real-life websites communicating with each other__. They can be run on the **Cloud** (**Amazon AWS**) ☁️using the Terraform IaC or Locally via **Docker** 🐋.
 
 The project is structured around __three__ subsystems: 
 - 📈 __Publicitaki__, a price tracker website;
