@@ -1,7 +1,7 @@
 # Publicitaki-Store-Bank Systems
 
 ### Summary: 
-This project consists of __three__ _interconnected_ applications that __simulate real-life websites communicating with each other__. They can be run on the **Cloud** (**Amazon AWS**) ☁️using the Terraform IaC or Locally via **Docker** 🐋.
+This project consists of __three__ _interconnected_ applications that __simulate real-life websites communicating with each other__. They can be run on the **Cloud** (**Amazon AWS**) ☁️ using the Terraform IaC or Locally via **Docker** 🐋.
 
 The project is structured around __three__ subsystems: 
 - 📈 __Publicitaki__, a price tracker website;
@@ -23,7 +23,7 @@ The project is structured around __three__ subsystems:
 - Python (Django)
 - JavaScript (NodeJS, React with Vite)
 
-## Environment Setup and Installation (Docker)
+## Environment Setup and Installation - LOCAL (Docker) 🐋
 - __Step 1__: Download the source code from Github;
 - __Step 2__: Download and install **Docker** and **Docker-Compose** from the official website https://www.docker.com/get-started/;
 - __Step 3__: Run docker-build.sh to build the containers;
@@ -31,7 +31,7 @@ The project is structured around __three__ subsystems:
 - __Step 6__: Access the frontend container on: http://localhost:6003 for the **Bank** 🏦, http://localhost:5006 for the **Store** 🛍️, and http://localhost:7007 for **Publicitaki** 📈;
 
 
-## Environment Setup and Installation (Amazon AWS)
+## Environment Setup and Installation - CLOUD (Amazon AWS) ☁️
 
 __Note__: __Windows 10 and Windows 11__ 🪟 users should use _Windows Subsystem for Linux (WSL)_ and follow the Linux commands.
 
