@@ -39,7 +39,7 @@ __Note__: __Windows 10 and Windows 11__ 🪟 users should use _Windows Subsystem
 - __Step 1__: Create a __AWS account__: (https://console.aws.amazon.com/console/home?nc2=h_ct&src=header-signin)
 - __Step 2__: Create a __IAM account__ with the __permissions "AdministratorAccess" and "AmazonS3FullAccess"__
 - __Step 3__: Then in the __IAM account__ select the _"Security Credentials"_ tab and in _"Access keys"_ select __"Create access key"__
-- __Step 4__: After the key's creation you should will have the __aws credentials__. __IMPORTANT__: do not forget to save the credentials because after you close the dialog you won't be able to see them again (if you forget them you can always delete them and creating a new one)
+- __Step 4__: After the key's creation you should will have the __aws credentials__. __IMPORTANT__: do not forget to save the credentials because after you close the dialog you won't be able to see them again (if you forget them you can always delete them and create a new one)
 - __Step 5__ Install software:
   - __macOS __: Install __Homebrew__ running the following command: <br> `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
   - __Linux 🐧__: __Update__ apt and install __curl__: <br> `sudo apt update && sudo apt install -y curl`
@@ -88,7 +88,7 @@ cd terraform-scripts
 ### Register PRODUCTS on Store and Publicitaki
 (_Optional_) To __add new products__ on the __Store__, you should go to the __Store-Products__ microservice and do the following:
 - Add a __category__, for example, "Playstation", on this URL: `<aws-endpoint-for-store-products>/categories`;
-- Add a __brand__, for example "SONY", on this URL: `<aws-endpoint-for-store-products>/brands`;
+- Add a __brand__, for example, "SONY", on this URL: `<aws-endpoint-for-store-products>/brands`;
 - Add a __product__, for example, "Resident Evil 4 Remake", on this URL: `<aws-endpoint-for-store-products>/products`.
 
 (_Optional_) To __add new products__ on __Publicitaki__, you should go to the frontend of the website Publicitaki __Pub-Frontend__ and do the following:
