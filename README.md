@@ -1,7 +1,7 @@
-# Publicitaki-Store-Bank-Systems (Amazon AWS)
+# Publicitaki-Store-Bank Systems
 
 ### Summary: 
-This project consists of __three__ _interconnected_ systems or applications that __simulate real-life websites communicating with each other__. 
+This project consists of __three__ _interconnected_ applications that __simulate real-life websites communicating with each other__. They can be run on the **Cloud** (**Amazon AWS**) using Terraform or locally via **Docker**.
 
 The project is structured around __three__ subsystems: 
 - 📈 __Publicitaki__, a price tracker website;
@@ -21,21 +21,17 @@ The project is structured around __three__ subsystems:
 - Java (Spring Boot and Quarkus)
 - C# (ASP.NET Core)
 - Python (Django)
-- JavaScript (NodeJS, React with Vite) 
+- JavaScript (NodeJS, React with Vite)
 
-## _Deploy_ and _Undeploy_ commands:
-- To __Deploy__(⬆️) run the following commands:
-```
-cd terraform-scripts
-./deploy_to_aws.sh
-```
-- To __Undeploy__(⬇️) run the following commands:
-```
-cd terraform-scripts
-./undeploy_from_aws.sh
-```
+## Environment Setup and Installation (Docker)
+- __Step 1__: Download the source code from Github;
+- __Step 2__: Download and install **Docker** and **Docker-Compose** from the official website https://www.docker.com/get-started/;
+- __Step 3__: Run docker-build.sh to build the containers;
+- __Step 4__: Run docker-run.sh to run the containers;
+- __Step 6__: Access the frontend container on: http://localhost:6003 for the **Bank** 🏦, http://localhost:5006 for the **Store** 🛍️, and http://localhost:7007 for **Publicitaki** 📈;
 
-## Environment Setup and Installation
+
+## Environment Setup and Installation (Amazon AWS)
 
 __Note__: __Windows 10 and Windows 11__ 🪟 users should use _Windows Subsystem for Linux (WSL)_ and follow the Linux commands.
 
@@ -73,6 +69,20 @@ cd terraform-scripts
 <br>_After 10 to 20 minutes, the deployment should be complete._
 - __Step 13__: After the deployment is complete, go to __Elastic Beanstalk Environments__ and select the environment __Store-Users__ and select __Configuration__ on the left pane. Then in __Instance traffic and scaling__ select __Edit__ and add a new _LISTENER_ on __port 5000 (TCP)__. Click __APPLY__. <br>After that, you should have a listener for __both__ ports 80 and 5000.
 - After __Step 13__ the application is ready to be used. To __UNDEPLOY__ run the following script: <br>`./undeploy_from_aws.sh`
+
+
+## _Deploy_ and _Undeploy_ commands:
+- To __Deploy__(⬆️) run the following commands:
+```
+cd terraform-scripts
+./deploy_to_aws.sh
+```
+- To __Undeploy__(⬇️) run the following commands:
+```
+cd terraform-scripts
+./undeploy_from_aws.sh
+```
+
 
 ## Notes
 ### Register PRODUCTS on Store and Publicitaki
